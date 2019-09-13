@@ -1,6 +1,8 @@
 
 import java.util.*;
 
+import static javafx.scene.input.KeyCode.T;
+
 public class BurritoOrder {
 
 
@@ -60,11 +62,16 @@ public class BurritoOrder {
 
             // take a random element from list and print them
 
-            //obj.getRandomElement(list,numberOfElements);
+            String replacement=obj.getRandomElement(list,numberOfElements).toString().replace("[", "")
+            .replace("]","")
+            .trim();
 
 
-            System.out.print(obj.getRandomElement(list, numberOfElements));
-            if (numberOfElements <10) {
+            System.out.print(replacement);
+            //List anotherlist=obj.getRandomElement((list, numberOfElements));
+
+
+            if (numberOfElements <=9) {
 
                 System.out.printf(" $" + (3 + (0.5 * numberOfElements))+"");
 
