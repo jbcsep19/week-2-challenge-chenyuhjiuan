@@ -70,6 +70,7 @@ public class BurritoOrder {
 
             //let the loop have a new line
             System.out.println("");
+
         }
     }
 
