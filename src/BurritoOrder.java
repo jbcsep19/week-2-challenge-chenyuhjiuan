@@ -37,7 +37,7 @@ public class BurritoOrder {
 
             // create a list of the above arrays
             List<String> list = new ArrayList<>();
-            // add 9 element in ArrayList
+            // add 9 randomized elements in ArrayList
             list.add(array1[a]);
             list.add(array2[b]);
             list.add(array3[c]);
@@ -49,70 +49,61 @@ public class BurritoOrder {
             list.add(array9[j]);
 
             BurritoOrder obj = new BurritoOrder();
-            //List<String>
-            // boundIndex for select in sub list
-            //int numberOfElements=5;
 
-            //for(int x=0;x<5;x++) {
+            //random list item numbers among 5 and 9
             int numberOfElements= 5 + random.nextInt(9);;
-            // }
 
+            //print 25 burritos
             System.out.printf("Burrito " + i + ": ");
 
-
-            // take a random element from list and print them
-
-            String replacement=obj.getRandomElement(list,numberOfElements).toString().replace("[", "")
-            .replace("]","")
-            .trim();
-
-
+            
+            //erase the bracket of the array
+            String replacement=obj.getRandomElement(list, numberOfElements).toString().replace("[", "")
+                    .replace("]","")
+                    .trim();
+            //print the burrito order list
             System.out.print(replacement);
-            //List anotherlist=obj.getRandomElement((list, numberOfElements));
 
 
-            if (numberOfElements <=9) {
+            if(numberOfElements<=9)
 
-                System.out.printf(" $" + (3 + (0.5 * numberOfElements))+"");
+                System.out.printf(" $" + (3 + (0.5 * numberOfElements)) + "");
 
-            }
-
+            //let the loop have a new line
             System.out.println("");
-
         }
-
     }
-    // Function select an element base on index and return
 
-    // an element
+    // Function select an element base on index and return an element
+
+
     public List<String> getRandomElement(List<String> list, int totalItems) {
 
 
-        // create a temporary list for storing
-        // selected element
+        // create a temporary list for storing selected element
+
         List<String> newList = new ArrayList<>();
+
         for (int i = 1; i <= totalItems; i++) {
 
-            // take a random index between 0 to size
-            // of given List
+            // take a random index between 0 to size of given List
+
             Random rand = new Random();
             if (!list.isEmpty()) {
+
                 int randomIndex = rand.nextInt(list.size());
 
                 newList.add(list.get(randomIndex));
-                    /*
-                    if(newList.get(0).equalsIgnoreCase("no rice")&&!newList.isEmpty()) {
-                        randomIndex=randomIndex-1;
-                    }
-                    if(list.get(2).equalsIgnoreCase("no beans")&&!newList.isEmpty())
-                    { randomIndex=randomIndex-1;}
 
-                Remove selected element from orginal list*/
+                // if not remove, the selected items will have another selection
                 list.remove(randomIndex);
+
+
             }
 
         }
 
         return newList;
     }
+
 }
