@@ -64,7 +64,43 @@ public class BurritoOrder {
             System.out.print(replacement);
 
             List newlist= obj.getRandomElement(list,numberOfElements);
-
+                newlist.clear();
+            if(newlist.add(array1[a])){
+                newlist.remove(array1[a]);
+                newlist.add(array1[a]);
+            }
+            if(newlist.add(array2[b])){
+                newlist.remove(array2[b]);
+                newlist.add(array2[b]);
+            }
+            if(newlist.add(array3[c])){
+                newlist.remove(array3[c]);
+                newlist.add(array3[c]);
+            }
+            if(newlist.add(array4[d])){
+                newlist.remove(array4[d]);
+                newlist.add(array4[d]);
+            }
+            if(newlist.add(array5[e])){
+                newlist.remove(array5[e]);
+                newlist.add(array5[e]);
+            }
+            if(newlist.add(array6[f])){
+                newlist.remove(array6[f]);
+                newlist.add(array6[f]);
+            }
+            if(newlist.add(array7[g])){
+                newlist.remove(array7[g]);
+                newlist.add(array7[g]);
+            }
+            if(newlist.add(array8[h])){
+                newlist.remove(array8[h]);
+                newlist.add(array8[h]);
+            }
+            if(newlist.add(array9[j])){
+                newlist.remove(array9[j]);
+                newlist.add(array9[j]);
+            }
 
             if(newlist!=null&&!newlist.isEmpty()&&numberOfElements<10) {
 
