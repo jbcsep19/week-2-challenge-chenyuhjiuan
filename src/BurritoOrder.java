@@ -21,7 +21,7 @@ public class BurritoOrder {
             int c = random.nextInt(array3.length);
             String array4[] = {"mild salsa", "medium salsa", "hot salsa", "no salsa"};
             int d = random.nextInt(array4.length);
-            String array5[] = {"lettuce", "fajita veggies", "no veggies"};
+            String array5[] = {"lettuce", "fajita veggies", "no lettuce veggies", "no fajita veggies"};
             int e = random.nextInt(array5.length);
             String array6[] = {"cheese"};
             int f = random.nextInt(array6.length);
@@ -52,7 +52,7 @@ public class BurritoOrder {
             //int numberOfElements=5;
 
             //for(int x=0;x<5;x++) {
-            int numberOfElements = 5 + random.nextInt(9);
+            int numberOfElements= 5 + random.nextInt(9);;
             // }
 
             System.out.printf("Burrito " + i + ": ");
@@ -64,10 +64,10 @@ public class BurritoOrder {
 
 
             System.out.print(obj.getRandomElement(list, numberOfElements));
-            if (numberOfElements <= 9) {
+            if (numberOfElements <10) {
 
-                System.out.print(" $" + (3 + (0.5 * numberOfElements)));
-                //break;
+                System.out.printf(" $" + (3 + (0.5 * numberOfElements))+"");
+
             }
 
             System.out.println("");
