@@ -63,11 +63,13 @@ public class BurritoOrder {
             //print the burrito order list
             System.out.print(replacement);
 
+            List newlist= obj.getRandomElement(list,numberOfElements);
 
-            if(numberOfElements<=9)
+
+            if(newlist!=null&&!newlist.isEmpty()&&numberOfElements<10) {
 
                 System.out.printf(" $" + (3 + (0.5 * numberOfElements)) + "");
-
+            }
             //let the loop have a new line
             System.out.println("");
 
