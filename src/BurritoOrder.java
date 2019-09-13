@@ -1,7 +1,6 @@
 
 import java.util.*;
 
-import static javafx.scene.input.KeyCode.T;
 
 public class BurritoOrder {
 
@@ -56,7 +55,7 @@ public class BurritoOrder {
             //print 25 burritos
             System.out.printf("Burrito " + i + ": ");
 
-            
+
             //erase the bracket of the array
             String replacement=obj.getRandomElement(list, numberOfElements).toString().replace("[", "")
                     .replace("]","")
