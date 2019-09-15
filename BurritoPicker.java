@@ -4,12 +4,14 @@ import java.util.Random;
 
 public class BurritoPicker {
     public static void main(String[] args) {
+
         //loop for 25 burritos
         for (int i = 1; i < 26; i++) {
-            //create arrays for each of the 9 ingredients and randomize item in an ingredient category
-            String array1[] = {"no rice", "white rice", "brown rice"};
 
+            //create arrays for each of the 9 ingredients and randomize item in an ingredient category
             Random random = new Random();
+
+            String array1[] = {"no rice", "white rice", "brown rice"};
 
             int a = random.nextInt(array1.length);
 
